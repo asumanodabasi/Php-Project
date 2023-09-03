@@ -9,7 +9,7 @@
       }
 
       else{
-         echo "<script> alert('Kullanıcı adı veya şifre hatalı!') </script>"
+         echo "<script> alert('Kullanıcı adı veya şifre hatalı!') </script>";
       }
 
    }

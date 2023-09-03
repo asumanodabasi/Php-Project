@@ -27,6 +27,7 @@ body {
 }
 
 nav {
+    margin:6px 30px;
     float: right;
     line-height: 80px;
 
@@ -193,6 +194,7 @@ span .icon {
     margin: 0.5rem 0;
     display: flex;
     align-items: center;
+    color: white;
     font-size: 1.2rem;
 }
 
@@ -674,5 +676,53 @@ textarea:focus {
 
     transition:transform .18s ease;
     transform: translateX(0);
+}
+
+
+
+.search{
+   justify-content: flex-end;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 40px;
+    margin: -60px;
+}
+
+.tboxsearch{
+    float: left;
+    background: none;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-size: 16px;
+   border-radius: 30px;
+    transition: 1s;
+}
+
+.btnsearch{
+    display: flex;
+    
+    align-items: center;
+    
+    font-size: 16px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin:-30px;
+}
+
+.select{
+    justify-content:flex-end ;
+    margin:24px;
+    background-color: transparent;
+    color: #162938;
+    border-radius: 30px;
+    height: 40px;
+    width: 400px;
+    border-bottom: 2px solid #162938;
+    outline: none;
 }
 

@@ -1,11 +1,21 @@
 <?php
-$client = new http\Client;
-$request = new http\Client\Request;
-$request->setRequestUrl('https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/databases/northwind-pubs/instnwnd.sql');
-$request->setRequestMethod('POST');
-$request->setOptions(array());
 
-$client->enqueue($request)->send();
-$response = $client->getResponse();
-echo $response->getBody();
+include("baglanti.php");
+    if(isset($_POST["email"],$_POST["password"])){
+        $email=$_POST["email"];
+        $pass=$_POST["password"];
+        $sql="Select *From employee Where email='$email'";
+        $result=$baglan->query($sql);
+        if($result->num_rows==0){
+        $ekle="INSERT INTO employee(email, password) VALUES ('".$email."','".$pass."')";
+
+        if($baglan->query($ekle)===TRUE){
+           header('location:login.php');
+           
+        }
+    }
+    else{
+        echo "Bu Email e sahip bir kullanıcı zaten mevcut";
+    }
+    }
 ?>

@@ -10,8 +10,4 @@
     if(!$baglan){
         die("Veri tabanında bağlanılamadı".mysqli_connect_error());
     }
-    else{
-        echo "Veri tabanına baglandii!!";
-    }
-
 ?>

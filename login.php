@@ -1,3 +1,39 @@
+<?php
+   //session_start();
+    //veri tabanından nasıl veri çekip karşılaştırabiliriz ona bak.
+    include("baglanti.php");
+
+
+    
+    if(isset($_POST["email"],$_POST["password"])){
+        
+        $emailCheck=$_POST["email"];
+        $pass=$_POST["password"];
+        $sec="Select * From employee Where email='$emailCheck' and password='$pass'";
+        $sonuc=$baglan->query($sec);
+    
+    if($sonuc){
+        
+        while ($cek=$sonuc->fetch_assoc()) {
+            header('location:ibbveriler.php');
+
+            echo  "
+            ".$cek['email']." ,".$cek['password']."
+            ";
+        }
+       
+    }
+
+    else{
+    echo "veri tabanında kayıtlı veri bulunamamıştır";
+    }
+
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,13 +55,16 @@
     <section id="menu">
         <div id="logo"></div>
             <nav>
-                <a href="file:///C:/phpProject/index.html"><i class="fa fa-home ikon" aria-hidden="true"></i>AnaSayfa</a>
-                <a href="file:///C:/phpProject/hakkimizda.html"><i class="fa fa-info ikon" aria-hidden="true"></i>Hakkımızda</a>
-                <a href=""><i class="fa fa-database ikon" aria-hidden="true"></i>Veriler</a>
-                <a href="file:///C:/phpProject/iletisim.html"><i class="fa fa-map-pin ikon" aria-hidden="true"></i>İletişim</a>
-                <a href="file:///C:/phpProject/login.html" class="btnLogin-popup"><i class="fa fa-sign-in ikon" aria-hidden="true"></i>Login</a>
+               
+            <a href="index.html"><i class="fa fa-home ikon" aria-hidden="true"></i>AnaSayfa</a>
+            <a href="hakkimizda.html"><i class="fa fa-info ikon" aria-hidden="true"></i>Hakkımızda</a>
+            
+            <a href="iletisim.html"><i class="fa fa-map-pin ikon" aria-hidden="true"></i>İletişim</a>
+            <a href="login.php"><i class="fa fa-sign-in ikon" aria-hidden="true"></i>Login</a>
             </nav> 
     </section>
+  
+    
     <div class="login1">
         <div class="wrapper">
             
@@ -33,22 +72,22 @@
                 <span class="icon-class">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>               
-                <form action="veriler.php">
+                <form action="" method="post">
                      <h2 id="log">Login</h2>
                     <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-envelope" aria-hidden="true"></i> </span>
                           
-                        <input id="email" type="email" required>
+                        <input id="email" type="email" name="email" required>
                       <label>Email</label>
                     </div>
                     <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-lock" aria-hidden="true"></i></span>
                         
-                        <input id ="pass" type="password" required>
+                        <input id ="pass" type="password" name="password" required>
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox">Remember me</label>
+                        <label><input type="checkbox">Remember me </label>
                         <a href="#">Forgot Password?</a>
                     </div>
                     <button type="submit" class="btn">Login</button>
@@ -64,23 +103,23 @@
                 <span class="icon-class">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>               
-                <form action="#">
+                <form action="veriler.php" method="post" onsubmit='return validated()'>
                      <h2 id="log">Register</h2>
                      <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-user" aria-hidden="true"></i></span>
                        
-                        <input type="text" id=text1 required>
+                        <input type="text" id=text1 name="name"required>
                          <label>Username</label>
                     </div>
                     <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-envelope" aria-hidden="true"></i> </span>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                       <label>Email</label>
                     </div>
                     <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-lock" aria-hidden="true"></i></span>
                        
-                        <input type="password" required>
+                        <input type="password" name ="password"required>
                          <label>Password</label>
                         
                     </div>
@@ -88,6 +127,7 @@
                         <label><input type="checkbox">I agree to the terms &conditions</label>
                         
                     </div>
+                    
                     <button type="submit" class="btn">Register</button>
                     <div class="login-register">
                         <p>Already have an account  <a href="#" class="login-link">Login</a></p>
@@ -97,10 +137,8 @@
           
         </div>
     </div>
+    <script src="kontrol.js"></script>
     <script src="login.js"></script>
 </body>
 </html>
 
-<?php
-    include("baglanti.php");
-?>
