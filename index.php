@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnaSayfa | İBB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c20485228a.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+
+</head>
+<body class="index">
+    <section id="menu">
+    <div id="logo"></div>
+        <nav>
+            <a href="file:///C:/phpProject/index.html"><i class="fa fa-home ikon" aria-hidden="true"></i>AnaSayfa</a>
+            <a href="file:///C:/xampp/htdocs/proje/hakkimizda.html"><i class="fa fa-info ikon" aria-hidden="true"></i>Hakkımızda</a>
+            <a href=""><i class="fa fa-database ikon" aria-hidden="true"></i>Veriler</a>
+            <a href="file:///C:/phpProject/iletisim.html"><i class="fa fa-map-pin ikon" aria-hidden="true"></i>İletişim</a>
+            <a href="file:///C:/phpProject/login.html"><i class="fa fa-sign-in ikon" aria-hidden="true"></i>Login</a>
+        </nav> 
+</section>
+
+<section id="anasayfa">
+    <div id ="black"></div>
+    <div id="icerik">
+        <h3>İBB</h3>
+        <hr width=200 align=left>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reprehenderit quibusdam hic beatae quo iusto eaque, ex consequatur cupiditate iste autem odit, ad ipsa possimus error quae nesciunt ipsam et.
+    </div>
+</section>
+
+
+</body>
+</html>
+<?php
+    include("baglanti.php");
+?>

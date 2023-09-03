@@ -26,7 +26,7 @@
                 <a href="file:///C:/phpProject/hakkimizda.html"><i class="fa fa-info ikon" aria-hidden="true"></i>Hakkımızda</a>
                 <a href=""><i class="fa fa-database ikon" aria-hidden="true"></i>Veriler</a>
                 <a href="file:///C:/phpProject/iletisim.html"><i class="fa fa-map-pin ikon" aria-hidden="true"></i>İletişim</a>
-                <a href="file:///C:/phpProject/login.html"><i class="fa fa-sign-in ikon" aria-hidden="true"></i>Login</a>
+                <a href="file:///C:/phpProject/login.php"><i class="fa fa-sign-in ikon" aria-hidden="true"></i>Login</a>
             </nav> 
     </section>
     <div class="containeri">
@@ -60,14 +60,14 @@
                 </div>
                 <div class="cont-right">
                     <form action="iletisim.php" method="post" id="form" onsubmit="return validated()">
-                        <input type="text" name="text" id="text" placeholder="İsim">
-                        <input type="email" name="email" id="email" placeholder="Email" autocomplete="off"><br>
+                        <input type="text" name="text" id="kutu" placeholder="İsim">
+                        <input type="email" name="email" id="kutu" placeholder="Email" autocomplete="off"><br>
                         <div id="email_error">Lütfen Email Adresi Girin</div>
-                        <input type="password" name="password" placeholder="Şifre" id="sifre"><br>
+                        <input type="password" name="password" placeholder="Şifre" id="kutu"><br>
                         <div id="pass_error">Lütfen Şifre Girin</div>
                         <textarea name="message" id="message" rows="1" placeholder="Mesaj"></textarea>
                         <button type="submit">GÖNDER </button>
-                        <button type="reset">TEMİZLE</button>
+                      <button type="reset">TEMİZLE</button>
                     </form>
                 </div>
             </div>

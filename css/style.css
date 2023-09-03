@@ -15,7 +15,7 @@ body {
     height: 80px;
     padding: 0 20px;
     background-color: #969aa7;
-    ;
+    
 
 }
 
@@ -163,7 +163,7 @@ span .icon {
     margin: 0% auto;
     padding: 0%;
     background: #969aa7;
-
+    height: 545px;
 }
 
 .contactTitle {
@@ -267,7 +267,7 @@ input[type=checkbox]:hover {
 input[type=text],
 textarea,
 button {
-    width: 100%;
+    
     margin: 1rem 0;
     background-color: transparent;
     font-size: 1.2rem;
@@ -374,6 +374,34 @@ textarea:focus {
     font-size: 20px;
 }
 
+#message{
+    margin-bottom: -20px;
+    
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #162938;
+    color: #7a2323;
+    transition: all 0.4s ease;
+    border-radius: 20px;
+}
+#kutu{
+    width: 100%;
+    margin: 1rem 0;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #162938;
+    color: #7a2323;
+    transition: all 0.4s ease;
+    border-radius: 20px;
+
+}
+
 #email_error,
 #pass_error,
 #mesaj_error {
@@ -440,11 +468,12 @@ textarea:focus {
 
 .login1 {
     background: url('../img/background.jpg') no-repeat;
-    height: 800px;
+    height: 590px;
     background-size: cover;
     background-position: center;
-    padding: 200px;
-
+    margin: auto;
+    padding: 100px;
+    
 }
 
 
@@ -462,13 +491,17 @@ textarea:focus {
     transition:transform .5s ease,height 2s ease;
     margin: auto;
     align-items: center;
-    transform: scale(0);
+    margin-top: -30px;
+    /* transform:scale(0); */
 }
 
 .wrapper.active-popup {
+
     transform: scale(1);
 }
-
+.wrapper.active {
+    height: 520px;
+}
 .input-box1 label {
     position: absolute;
     top: 50%;
@@ -616,13 +649,6 @@ textarea:focus {
 
 
 
-
-
-
-.wrapper.active {
-    height: 520px;
-}
-
 .wrapper.form-box {
     width: 100%;
     padding: 40px;
@@ -647,6 +673,6 @@ textarea:focus {
 .wrapper.active .form-box.register {
 
     transition:transform .18s ease;
-    transform: translateX(0px);
+    transform: translateX(0);
 }
 
