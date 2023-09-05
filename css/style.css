@@ -91,16 +91,27 @@ nav a:visited {
 }
 
 #about {
+    margin-left: 550px;
     text-align: center;
     text-decoration: none;
     font-size: 55px;
-    color: darkgrey;
+    
 }
 
 #container {
-    width: 1100px;
-    height: auto;
+    background-position: center;
+    background-attachment: fixed;
+    
+    width:auto;
+   background-size: cover;
+   height: 600px;
+   
+   background-image: url("../img/iletisim.jpg");
+    
+    
     margin: auto;
+    
+    
 }
 
 #sol {
@@ -135,9 +146,7 @@ span .icon {
 }
 
 #sag {
-    float: right;
-    width: 750px;
-    color: thistle;
+    
     text-align: center;
     letter-spacing: 1px;
     font-size: 15px;
@@ -145,10 +154,19 @@ span .icon {
     font-weight: 100;
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
+/* .img{
+    background-position: center;
+    background-attachment: fixed;
+    
+    width:auto;
+   background-size: cover;
+   height: 600px;
+   
+   background-image: url("../img/iletisim.jpg");
+  
+
+
+} */
 
 .contact-area {
     display: flex;

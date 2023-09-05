@@ -1,6 +1,5 @@
 <?php
-   //session_start();
-    //veri tabanından nasıl veri çekip karşılaştırabiliriz ona bak.
+   
     include("baglanti.php");
 
 
@@ -25,7 +24,8 @@
     }
 
     else{
-    echo "veri tabanında kayıtlı veri bulunamamıştır";
+    echo 
+    "Kullanıcı adı veya şifre hatalı";
     }
 
     }
@@ -64,7 +64,7 @@
             </nav> 
     </section>
   
-    
+   
     <div class="login1">
         <div class="wrapper">
             
@@ -72,7 +72,7 @@
                 <span class="icon-class">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>               
-                <form action="" method="post">
+                <form action="" method="post" onsubmit="return validated()">
                      <h2 id="log">Login</h2>
                     <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-envelope" aria-hidden="true"></i> </span>
@@ -90,6 +90,7 @@
                         <label><input type="checkbox">Remember me </label>
                         <a href="#">Forgot Password?</a>
                     </div>
+                 
                     <button type="submit" class="btn">Login</button>
                     <div class="login-register">
                         <p>Don't have an account  <a href="#" class="register-link">Register</a></p>
@@ -98,12 +99,12 @@
               
             </div>
 
-
+            
             <div class="form-box register" id="register1">
                 <span class="icon-class">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>               
-                <form action="veriler.php" method="post" onsubmit='return validated()'>
+                <form action="veriler.php" method="post" onsubmit="return validated()">
                      <h2 id="log">Register</h2>
                      <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-user" aria-hidden="true"></i></span>
