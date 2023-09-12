@@ -4,3 +4,4 @@
 -Xampp kullanılarak localhost ile proje ayağa kalkmaktadır.
 -Veri tabanı olarak phpmyadmin ile mysql kullanılmıştır.
 
+
