@@ -4,7 +4,7 @@
   
     if(isset( $_POST['input']))
      $input=$_POST['input'];
-    $control = "SELECT * FROM ocakayiulasim WHERE line LIKE '{$input}%'or date like '{$input}%'or passenger like '{$input}%'";
+    $control = "SELECT * FROM ocakayiulasim WHERE line LIKE '{$input}%'or transition_date like '{$input}%'or road_type like '{$input}%' or transfer_type like '{$input}%'";
     $result=mysqli_query($baglan,$control);
 
     if(mysqli_num_rows($result)>0)
@@ -60,6 +60,6 @@
 }
     else
     {
-        echo 'Böyle bir üye yok';
+        echo 'Bulunamadı!!';
     }
     ?>

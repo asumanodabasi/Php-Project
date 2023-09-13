@@ -20,25 +20,25 @@ $response = curl_exec($curl);
 $data=json_decode($response,true);
 
 
-
-foreach ($data as $row) {
+foreach ($data['result']['records'] as $row) {
  
+  $date=$row['transition_date'];
+  $hour=$row['transition_hour'];
+  $typeId=$row['transport_type_id'];
+  $type=$row['road_type'];
+  $line=$row['line'];
+  $transfer=$row['transfer_type'];
+  $passage=$row['number_of_passage'];
+  $passenger=$row['number_of_passenger'];
+
 
   $sql = "INSERT INTO ocakayiulasim(transition_date, transition_hour, transport_type_id, road_type, line, transfer_type, number_of_passage,
-  number_of_passenger) VALUES (':date',':hour',':typeId',':type',':line',':transfer',':passage',':passenger')";
+  number_of_passenger) VALUES ('$date','$hour','$typeId','$type','$line','$transfer','$passage','$passenger')";
   $stmt = $baglan->prepare($sql);
-  $stmt->bindParam(':date',$data['transition_date']);
-  $stmt->bindParam(':hour', $hour);
-  $stmt->bindParam(':typeId', $typeId);
-  $stmt->bindParam(':type', $type);
-  $stmt->bindParam(':line', $line);
-  $stmt->bindParam(':transfer', $transfer);
-  $stmt->bindParam(':passage', $passage);
-  $stmt->bindParam(':passenger', $passenger);
-  $stmt->execute();
 
-  
+   
 }
+
 curl_close($curl);
-return $data;
+
 ?>

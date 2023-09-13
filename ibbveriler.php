@@ -113,7 +113,7 @@ $(document).ready(function(){
     if(input!=""){
       $.ajax({
 
-        url:"vericek.php",
+        url:"api.php",
         method:"POST",
         data:{input:input},
 

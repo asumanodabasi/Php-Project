@@ -72,7 +72,7 @@
                 <span class="icon-class">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>               
-                <form action="" method="post" onsubmit="return validated()">
+                <form action="veriler.php" method="post" onsubmit="return validated()">
                      <h2 id="log">Login</h2>
                     <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-envelope" aria-hidden="true"></i> </span>
@@ -104,7 +104,7 @@
                 <span class="icon-class">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>               
-                <form action="veriler.php" method="post" onsubmit="return validated()">
+                <form action="" method="post" onsubmit="return validated()">
                      <h2 id="log">Register</h2>
                      <div class="input-box1">
                         <span class="iconlog"><i class="fa fa-user" aria-hidden="true"></i></span>

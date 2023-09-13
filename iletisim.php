@@ -11,6 +11,7 @@ include("baglanti.php");
         $sec="Select * From employee Where email='$emailCheck' and password='$pass'";
         $sonuc=$baglan->query($sec);
          echo "Bilgiler alındıı..";
+         header("location:ibbveriler.php")
       }
 
       else{
