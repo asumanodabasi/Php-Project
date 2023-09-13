@@ -73,7 +73,7 @@
       <?php
     include("baglanti.php");
     
-    $sec="Select*From ocakayiulasim";
+    $sec="Select * From ocakayiulasim";
     $cek=$baglan->query($sec);
     if($cek->num_rows >0){
         while($sonuc=$cek->fetch_assoc()){
