@@ -10,7 +10,7 @@ include("baglanti.php");
         $pass=$_POST["password"];
         $sec="Select * From employee Where email='$emailCheck' and password='$pass'";
         $sonuc=$baglan->query($sec);
-         header("location:ibbveriler.php");
+         echo "Bilgiler alındıı..";
       }
 
       else{

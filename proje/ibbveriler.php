@@ -72,7 +72,8 @@
      
       <?php
     include("baglanti.php");
-    $sec="Select*From ocakayiulasim";
+    
+    $sec="Select * From ocakayiulasim";
     $cek=$baglan->query($sec);
     if($cek->num_rows >0){
         while($sonuc=$cek->fetch_assoc()){
@@ -112,7 +113,7 @@ $(document).ready(function(){
     if(input!=""){
       $.ajax({
 
-        url:"api.php",
+        url:"vericek.php",
         method:"POST",
         data:{input:input},
 
